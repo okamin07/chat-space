@@ -1,6 +1,5 @@
 # DB設計
 
-
 ## usersテーブル
 
 |Column|Type|Options|
@@ -37,7 +36,6 @@
 ### Association
 - belongs_to :user
 - belongs_to :group
-
 
 ## groups_usersテーブル
 
