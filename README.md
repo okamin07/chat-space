@@ -4,9 +4,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|varcahr(255)|null: false, foreign_key: true|
-|e-mails|varchar(255)|null: false, foreign_key: true|
-|pass|varchar(255)|null: false, foreign_key: true|
+|name|string|null: false,index: true |
+|e-mails|string|null: false|
+|pass|string|null: false,|
 
 ### Association
 - has_many :messages
@@ -17,7 +17,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|varchar(255)|null: false, foreign_key: true|
+|name|string|null: false|
 
 ### Association
 - has_many :messages
@@ -28,10 +28,10 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false, foreign_key: true|
-|image|text|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|text|text||
+|image|text||
+|user|reference|null: false, foreign_key: true|
+|group|reference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -41,8 +41,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
