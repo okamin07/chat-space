@@ -36,12 +36,12 @@
       background: #2f3e51; 
       .sidebar__message-box{
         padding:20px;
-        .sidebar__message-box__group-name{
+        &__group-name{
           color:#FFFFFF;
           font-size:15px;
           padding-bottom: 5px;
         }
-        .sidebar__message-box__messages{
+        &__messages{
           color:#FFFFFF;
           font-size:11px;
         }
