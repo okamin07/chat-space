@@ -1,0 +1,172 @@
+// Place all the styles related to the messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.body{
+  height:100vh;
+  display: flex;
+  .sidebar {
+    width:300px;
+
+    &__header{
+      height:100px;
+      background: #253141;
+      color:#FFFFFF;
+      font-weight:bold;
+      margin:0px;
+      display:flex;
+      align-items: center;
+      
+      .icon {
+        color:#FFFFFF;
+      }
+      .sidebar__account-name{
+        width:100vw;
+        font-size:16px;
+        color:#ffffff;
+        margin:0px;
+        padding:0px 20px;
+        display:flex;
+        justify-content: space-between;
+      }
+    }
+    
+    &__message-boxs{
+      color:#FFFFFF;
+      height: 100vh;
+      background: #2f3e51; 
+      .sidebar__message-box{
+        padding:20px;
+        &__group-name{
+          color:#FFFFFF;
+          font-size:15px;
+          padding-bottom: 5px;
+        }
+        &__messages{
+          color:#FFFFFF;
+          font-size:11px;
+        }
+      }
+    }
+  }
+
+  .contents{
+  height:100vh;
+  width : calc(100vw - 300px) ;
+  padding:0px 0px 90px;
+  background:#fafafa;
+    &__message-area{
+          background:#fafafa;
+          margin:0;
+          width:inherit;
+        }
+        &__messages{
+          padding-top:46px;
+          background:#fafafa;
+        }
+        &__message-box{
+          padding:0px 40px 40px;
+        }
+        .message-top{
+          display:flex;
+        }
+        .user-name{
+        font-size:16px;
+        font-weight:bold;
+        }
+        .time{
+          font-size:12px;
+          color:#999999;
+          margin-left:10px;
+        }
+        .message{
+          font-size:14px;
+          color:#434A54;
+          margin-top:10px;
+        }
+    &__footer{
+          background:lightgray;
+          width:inherit;
+          height:90px;
+          position:fixed;
+          bottom:0;
+          .form-box{
+            padding:20px 40px;
+            display:flex
+          }
+        
+          input{
+            height:50px;
+            padding:0px 10px;
+            border:none;
+            width:100%;
+          }
+          button{
+            background:#38AEF0;
+            height:50px;
+            width:100px;
+            padding:0px 30px;
+            margin-left:15px;
+            padding-top:0px;
+            border:none;
+            font-size:16px;
+            color:#FFFFFF;
+          }
+    }
+
+    &__header{
+          height:100px;
+          border-bottom:solid #eeeeee;
+          border-width:thin;
+          padding:0px 40px;
+          display:flex;
+          justify-content: space-between;
+          &__group-name{
+            font-size:20px;
+            color:#333333;
+            padding:35px 0px;
+            padding-bottom:0;
+            margin:0px;
+          }
+          &__member{
+            font-size:12px;
+            color:#999999;
+            padding:0px;
+            margin-top:15px;
+      }
+    }
+  }
+}
+
+.contents-header__edit-button{
+display:flex;
+text-align: center;
+line-height: 40px;
+box-sizing: border-box;
+height:40px;
+padding:0px 20px;
+text-align: center;
+border: 1px solid #38AEF0;
+text-decoration: none;
+color: #38AEF0;
+background: #ffffff;
+font-size:16px;
+margin-top:30px;
+}
+.file{
+  display:none;
+}
+label{
+  height:50px;
+  display:flex;
+  align-items: center;
+}
+.input-box{
+  display:flex;
+  background-color:white;
+  width:100%;
+  align-items:center;
+  padding-right:10px;
+}
+.fa-image{
+  font-size:1.3em;
+}
