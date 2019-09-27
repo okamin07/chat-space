@@ -1,0 +1,19 @@
+.sidebar
+  .sidebar__header
+    .sidebar__account-name
+      = current_user.name
+      .icon
+        = link_to new_group_path do
+          = fa_icon 'pencil-square-o', class: 'icon'
+        = link_to edit_user_path(current_user) do
+          = fa_icon 'cog', class: 'icon'
+  .sidebar__message-boxs
+    - current_user.groups.each do |group|
+      = link_to '#' do
+        .sidebar__message-box
+          = link_to group_messages_path(group) do
+            .sidebar__message-box__group-name
+              = group.name
+            .sidebar__message-box__messages
+              メッセージがここに入るよ
+                
