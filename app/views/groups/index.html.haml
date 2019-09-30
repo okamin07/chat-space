@@ -1,39 +1,4 @@
 .body
   = render 'shared/side_bar'
   
-  .contents
-    .contents__header
-      .group
-        .contents__header__group-name
-          チャンプルー
-        .contents__header__member
-          Member：女将ん
-      .contents-header__edit-button
-        = link_to 'Edit' , '/groups/1/edit'
-    .contents__message-area
-      .contents__messages
-        .contents__message-box
-          .message-top
-            .user-name
-              女将ん
-            .time
-              2019/09/11(wed) 09:00:01
-          .message
-            ゴーヤがここに入るよ
-        .contents__message-box
-          .message-top
-            .user-name
-              女将ん
-            .time
-              2019/09/11(wed) 09:00:00
-          .message
-            こんにゃく最初に作ったやつは天才
-      .contents__footer
-        .form-box
-          .input-box
-            %input{name: "message",placeholder: "type a message", type: "text"}
-              %label
-            %input{class: "file",type: "file"}
-            %input-image
-              %i.fa.fa-image
-          %button Send
+ 
