@@ -61,8 +61,10 @@
           width:inherit;
         }
         &__messages{
-          padding-top:46px;
+          padding:46px 40px;
           background:#fafafa;
+          height:calc(100vh - 190px);
+          overflow: scroll;
         }
         &__message-box{
           padding:0px 40px 40px;
@@ -84,34 +86,71 @@
           color:#434A54;
           margin-top:10px;
         }
-    &__footer{
-          background:lightgray;
-          width:inherit;
-          height:90px;
-          position:fixed;
-          bottom:0;
-          .form-box{
-            padding:20px 40px;
-            display:flex
-          }
+    // &__footer{
+    //       background:lightgray;
+    //       width:inherit;
+    //       height:90px;
+    //       position:fixed;
+    //       bottom:0;
+    //       .form-box{
+    //         padding:20px 40px;
+    //         display:flex
+    //       }
         
-          input{
-            height:50px;
-            padding:0px 10px;
-            border:none;
-            width:100%;
-          }
-          button{
-            background:#38AEF0;
-            height:50px;
-            width:100px;
-            padding:0px 30px;
-            margin-left:15px;
-            padding-top:0px;
-            border:none;
-            font-size:16px;
-            color:#FFFFFF;
-          }
+    //       .input{
+    //         height:50px;
+    //         padding:0px 10px;
+    //         border:none;
+    //         width:100%;
+    //       }
+    //       .button{
+    //         background:#38AEF0;
+    //         height:50px;
+    //         width:100px;
+    //         padding:0px 30px;
+    //         margin-left:15px;
+    //         padding-top:0px;
+    //         border:none;
+    //         font-size:16px;
+    //         color:#FFFFFF;
+    //       }
+    // }
+
+    .form {
+      background-color: #DDDDDD;
+      box-sizing: border-box;
+      height: 90px;
+      padding: 20px 40px;
+      &__message {
+        border: none;
+        float: left;
+        height: 50px;
+        padding: 0 40px 0 10px;
+        width:100%;
+      }
+      &__mask {
+        background-color: lightgray;
+        float: left;
+        height: 50px;
+        padding-right: 10px;
+        &__image {
+          font-size: 20px;
+          line-height: 50px;
+          position: absolute;
+          top:10px;
+          right:10px;
+        }
+      }
+      &__submit {
+        background-color: #38AEF0;
+        border: none;
+        color: #FFFFFF;
+        float: right;
+        font-size: 16px;
+        height: 50px;
+        margin-left: 15px;
+        padding: 0 30px;
+      }
     }
 
     &__header{
@@ -162,12 +201,20 @@ label{
   align-items: center;
 }
 .input-box{
-  display:flex;
+  // display:flex;
   background-color:white;
   width:100%;
   align-items:center;
-  padding-right:10px;
+  position: relative;
 }
 .fa-image{
   font-size:1.3em;
 }
+.hidden {
+  display: none;
+}
+
+form{
+  display:flex;
+}
+
