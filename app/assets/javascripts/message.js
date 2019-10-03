@@ -46,6 +46,6 @@ function buildHTML(message){
   })
   .fail(function(){
     alert('メッセージを入力してください');
-    })
+  })
   });
 });
