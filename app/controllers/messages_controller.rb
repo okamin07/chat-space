@@ -1,8 +1,7 @@
 class MessagesController < ApplicationController
   def index
+  end
 
-<<<<<<< Updated upstream
-=======
   def create
     @message = @group.messages.new(message_params)
     if @message.save
@@ -15,10 +14,5 @@ class MessagesController < ApplicationController
       flash.now[:alert] = 'メッセージを入力してください。'
       render :index
     end
->>>>>>> Stashed changes
-  end
-
-  def create
-
   end
 end
