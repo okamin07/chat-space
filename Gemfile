@@ -64,4 +64,12 @@ gem 'haml-rails'
 gem 'font-awesome-rails'
 gem  'devise'
 gem 'erb2haml'
+<<<<<<< Updated upstream
 
+=======
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'jquery-rails'
+gem 'pry-rails' 
+gem 'pry-byebug'
+>>>>>>> Stashed changes
