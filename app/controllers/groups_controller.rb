@@ -1,4 +1,6 @@
 class GroupsController < ApplicationController
+  before_action :set_group, only: [:edit, :update]
+
   def index
   end
   
@@ -11,13 +13,14 @@ class GroupsController < ApplicationController
     end
   end
 
-  def edit
-  end 
   def new
     @group = Group.new
     @group.users << current_user
   end
 
+
+  def edit
+  end
 
   def update
     if @group.update(group_params)
@@ -26,6 +29,7 @@ class GroupsController < ApplicationController
       render :edit
     end
   end
+
 
   private
   def group_params
