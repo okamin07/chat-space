@@ -5,11 +5,13 @@
     .contents__header
       .group
         .contents__header__group-name
-          チャンプルー
+          = @group.name
         .contents__header__member
-          Member：女将ん
+          Member：
+          - @group.users.each do |user|
+            =user.name
       .contents-header__edit-button
-        = link_to 'Edit' , '/groups/1/edit'
+        = link_to 'Edit' , edit_group_path(@group)
     .contents__message-area
       .contents__messages
         = render @messages

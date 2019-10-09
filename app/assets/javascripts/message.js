@@ -25,7 +25,6 @@ function buildHTML(message){
   $(".new_message").on('submit', function(e) {
     console.log("送信ボタンが押されました");
     e.preventDefault();
-    console.log(this)
     var formData = new FormData(this);
     var url = $(this).attr('action')
     $.ajax({
