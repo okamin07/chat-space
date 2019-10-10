@@ -37,7 +37,6 @@ function buildHTML(message){
       contentType: false
     })
     .done(function(data){
-      console.table(data)
       var html = buildHTML(data);
     $('.contents__messages').append(html)
     $('.contents__messages').animate({ scrollTop: $('.contents__messages')[0].scrollHeight});
@@ -64,7 +63,6 @@ function buildHTML(message){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log('success');
       var insertHTML = '';
       messages.forEach(function(messages){
       html2 = buildHTML(messages)
@@ -73,8 +71,8 @@ function buildHTML(message){
     })
   })
     .fail(function() {
-      console.log('error');
-})
+      alert('error');
+      })
     };
   }
   setInterval(reloadMessages, 5000);
