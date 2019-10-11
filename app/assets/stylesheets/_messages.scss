@@ -122,6 +122,7 @@
       height: 90px;
       padding: 20px 40px;
       &__message {
+        position: relative;
         border: none;
         float: left;
         height: 50px;
@@ -215,4 +216,7 @@ label{
 }
 li{
   list-style:none;
+}
+#new_message{
+  display:flex;
 }

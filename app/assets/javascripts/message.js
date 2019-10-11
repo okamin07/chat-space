@@ -48,8 +48,6 @@ function buildHTML(message){
     alert('メッセージを入力してください');
   })
   })
-
-
   var reloadMessages = 
   function () {
     if (window.location.href.match(/\/groups\/\d+\/message/)){
