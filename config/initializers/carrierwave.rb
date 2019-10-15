@@ -13,5 +13,5 @@ CarrierWave.configure do |config|
   }
 
   config.fog_directory  = 'okamin-asia'
-  config.asset_host = 'https://s3-こap-northeast-1.amazonaws.com/okamin-asia'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/okamin-asia'
 end
