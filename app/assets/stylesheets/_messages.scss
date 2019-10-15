@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .body{
-  height:100vh;
+  // height:100vh;
   display: flex;
   .sidebar {
     width:300px;
@@ -51,15 +51,13 @@
   }
 
   .contents{
-  height:100vh;
   width : calc(100vw - 300px) ;
-  padding:0px 0px 90px;
   background:#fafafa;
-    &__message-area{
-          background:#fafafa;
-          margin:0;
-          width:inherit;
-        }
+    // &__message-area{
+    //       background:#fafafa;
+    //       margin:0;
+    //       width:inherit;
+    //     }
         &__messages{
           padding:46px 40px;
           background:#fafafa;
@@ -67,7 +65,7 @@
           overflow: scroll;
         }
         &__message-box{
-          padding:0px 40px 40px;
+          padding:0px 0px 40px 0px;
         }
         .message-top{
           display:flex;
@@ -219,4 +217,12 @@ li{
 }
 #new_message{
   display:flex;
+}
+
+.body::-webkit-scrollbar{
+  display:none;
+}
+
+.body{
+  -ms-overflow-style:none;
 }
