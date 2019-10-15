@@ -82,6 +82,10 @@ end
 set :linked_files, %w{ config/secrets.yml }
 
 # 元々記述されていた after 「'deploy:publishing', 'deploy:restart'」以下を削除して、次のように書き換え
+# secrets.yml用のシンボリックリンクを追加
+set :linked_files, %w{ config/secrets.yml }
+
+# 元々記述されていた after 「'deploy:publishing', 'deploy:restart'」以下を削除して、次のように書き換え
 
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
@@ -99,5 +103,5 @@ namespace :deploy do
     end
   end
   before :starting, 'deploy:upload'
-  after :finishing, 'deploy:cl'
+  after :finishing, 'deploy:cleanup'
 end
