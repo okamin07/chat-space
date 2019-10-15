@@ -99,4 +99,4 @@ namespace :deploy do
     end
   end
   before :starting, 'deploy:upload'
-  after :finishing, 'deploy:cl
+  after :finishing, 'deploy:cl'
