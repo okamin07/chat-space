@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function() {
   var chatusers = $("#user-search-result");
   function appendUsers(user) {
     var html = 
@@ -15,7 +15,6 @@ $(function() {
     </div>`
   chatusers.append(html);
   }
-
 
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
@@ -58,4 +57,9 @@ $("#user-group-member").append(html);
     var parent = $(this).parent();
     $(parent).remove();
     });
+});
+
+
+document.addEventListener('turbolinks:load', function(event) {
+  
 });

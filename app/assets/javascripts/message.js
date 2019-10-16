@@ -58,7 +58,7 @@ function buildHTML(message){
       url: 'api/messages',
       type: 'get',
       dataType: 'json',
-      data: {id: last_message_id}
+      data: {laste_message_id: id}
     })
     .done(function(messages) {
       var insertHTML = '';
@@ -75,3 +75,5 @@ function buildHTML(message){
   }
   setInterval(reloadMessages, 5000);
 });
+
+
