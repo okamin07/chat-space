@@ -11,7 +11,7 @@
           - @group.users.each do |user|
             =user.name
       .contents-header__edit-button
-        = link_to 'Edit' , edit_group_path(@group)
+        = link_to 'Edit' , edit_group_path(@group),data:{turbolinks:false}
     .contents__messages
       = render @messages
     .form

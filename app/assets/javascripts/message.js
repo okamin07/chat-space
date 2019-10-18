@@ -1,5 +1,6 @@
 
 $(document).on('turbolinks:load', function() {
+// $(function(){
 function buildHTML(message){
   var imageclass  = 
   message.image == null ? `` : `<img class="lower-message__image" src="${message.image}"></img>`

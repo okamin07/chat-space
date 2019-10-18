@@ -18,10 +18,18 @@ $(document).on('turbolinks:load', function() {
 
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
+    // var userid = $(".js-remove-btn").val();
+    var selected_users = [];
+    $(".js-remove-btn").each(function(){
+      selected_users.push($(this).attr("value"));
+    });
+    console.log(selected_users)
     $.ajax({
       type: 'GET',
       url: '/users',
-      data: { keyword: input },
+      data: { keyword: input ,
+              selected_users: selected_users
+            },
       dataType: 'json'
     })
     .done(function(users) {
@@ -38,9 +46,10 @@ $(document).on('turbolinks:load', function() {
     .fail(function() {
       alert('error');
     });
+    return false;
   });
 
-$(document).on("click", ".chat-group-user__btn--add", function() {
+  $(document).on("click", ".chat-group-user__btn--add", function() {
   var parent = $(this).parent();
   var name = $(this).data('userName');
   var id = $(this).data('userId');
@@ -48,18 +57,15 @@ $(document).on("click", ".chat-group-user__btn--add", function() {
   `<div class='chat-group-user'>
   <input name='group[user_ids][]' type='hidden' value='${id}'>
   <p class='chat-group-user__name'>${name}</p>
-  <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
+  <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn' value='${id}'id='userid'>削除</div>
   </div>`;
 $("#user-group-member").append(html);
   $(parent).remove();
   });
+  
   $(document).on("click", ".js-remove-btn", function() {
     var parent = $(this).parent();
     $(parent).remove();
     });
-});
-
-
-document.addEventListener('turbolinks:load', function(event) {
-  
+    
 });
